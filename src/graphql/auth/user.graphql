@@ -1,0 +1,38 @@
+mutation createUser($email: String!, $password: String!, $username: String!) {
+  createUser(email: $email, password: $password, username: $username) {
+    user {
+      id
+      username
+      email
+    }
+  }
+}
+
+mutation loginUser($username: String!, $password: String!) {
+  tokenAuth(username: $username, password: $password) {
+    token
+    payload
+  }
+}
+
+mutation verifyToken($token: String!) {
+  verifyToken(token: $token) {
+    payload
+  }
+}
+
+mutation forgetPassword($username: String!, $email: String!) {
+  changePasswordIfForgotten(username: $username, email: $email) {
+    user {
+      email
+    }
+  }
+}
+
+query getProfile {
+  me {
+    id
+    username
+    email
+  }
+}
