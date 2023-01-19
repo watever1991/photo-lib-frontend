@@ -19,7 +19,7 @@ function App() {
     try {
       await VerifyToken({ variables: { token } });
     } catch (error) {
-      console.log("wtffffffffffffff", error);
+      console.log(error);
       dispatch(
         openSnackbar({
           message: "Your session has expired.",

@@ -22,8 +22,6 @@ const Navbar = () => {
   const theme = useTheme();
   const { data, loading } = useGetProfileQuery();
 
-  console.log("dataaaaa", data);
-
   const handleLogout = () => {
     localStorage.clear();
     dispatch(logout());
