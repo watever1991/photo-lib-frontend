@@ -9,6 +9,9 @@ import { openSnackbar } from "store/features/message/snackbarSlice";
 const UserApp = lazy(() => import("routers/user-router"));
 const AnonymousApp = lazy(() => import("routers/anonymous-router"));
 
+const loadStudentRouter = () => import("routers/anonymous-router");
+const loadDoctorRouter = () => import("routers/user-router");
+
 function App() {
   const dispatch = useDispatch();
   const token = useSelector((state: RootState) => state.user.token);
@@ -32,6 +35,8 @@ function App() {
   };
 
   useEffect(() => {
+    loadStudentRouter();
+    loadDoctorRouter();
     if (token) {
       handkeVerifyToken(token);
     }

@@ -3,7 +3,7 @@ import { openSnackbar } from "store/features/message/snackbarSlice";
 import { useDispatch } from "react-redux";
 
 //loading formik and validator
-import { validationRegister } from "validation";
+import { validationRegister } from "helpers/validation";
 import { useFormik, FormikHelpers } from "formik";
 
 //loading MUI

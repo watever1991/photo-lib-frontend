@@ -1,4 +1,4 @@
-import { validationForgetPassword } from "validation";
+import { validationForgetPassword } from "helpers/validation";
 import { useForgetPasswordMutation } from "generated/graphql";
 import {
   Box,

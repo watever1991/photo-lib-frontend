@@ -1,5 +1,5 @@
 import React from "react";
-import { validationLogin } from "validation";
+import { validationLogin } from "helpers/validation";
 import { useLoginUserMutation } from "generated/graphql";
 import {
   Box,
