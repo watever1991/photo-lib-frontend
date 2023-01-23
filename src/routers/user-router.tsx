@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "store";
 import { Route, Routes, Navigate, BrowserRouter } from "react-router-dom";
 import NotFoundPage from "PageNotFound";
-import { Home } from "pages";
+import { Dashboard, Home } from "pages";
 import Layout from "components/Layout";
 import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
@@ -16,7 +16,7 @@ const routes: TRoute[] = [
   },
   {
     path: "/home",
-    component: <Home />,
+    component: <Dashboard />,
   },
   {
     path: "/login",

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "store";
-import { closeSnackbar } from "store/features/message/snackbarSlice";
+import { closeSnackbar } from "store/message/snackbarSlice";
 //loading MUI
 import { Alert } from "@mui/material";
 import Snackbar from "@mui/material/Snackbar";

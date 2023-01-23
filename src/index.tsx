@@ -1,25 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-redux";
-import { store } from "./store";
-import SimpleSnackbar from "components/core/Snackbar";
-import { ApolloProvider } from "@apollo/client";
-import client from "lib/clients/graphqlRequestClient";
+import AppWrapper from "AppWrapper";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <ApolloProvider client={client}>
-        <App />
-        <SimpleSnackbar />
-      </ApolloProvider>
-    </Provider>
+    <AppWrapper />
   </React.StrictMode>
 );
 

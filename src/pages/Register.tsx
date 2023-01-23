@@ -1,5 +1,5 @@
-import { setUser } from "store/features/user/userSlice";
-import { openSnackbar } from "store/features/message/snackbarSlice";
+import { setUser } from "store/user/userSlice";
+import { openSnackbar } from "store/message/snackbarSlice";
 import { useDispatch } from "react-redux";
 
 //loading formik and validator

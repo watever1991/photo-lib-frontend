@@ -12,7 +12,7 @@ import images from "assets/images";
 import { useFormik, FormikHelpers } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { openSnackbar } from "store/features/message/snackbarSlice";
+import { openSnackbar } from "store/message/snackbarSlice";
 
 const styles = {
   boxContainer: {

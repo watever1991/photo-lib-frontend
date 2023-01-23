@@ -12,11 +12,13 @@ import { themeSettings } from "theme";
 const routes: TRoute[] = [
   {
     path: "/",
-    component: <Navigate to="/login" replace />,
+    component: <Home />,
+    layout: <Layout />,
   },
   {
     path: "/home",
-    component: <Navigate to="/login" replace />,
+    component: <Home />,
+    layout: <Layout />,
   },
   {
     path: "/login",
