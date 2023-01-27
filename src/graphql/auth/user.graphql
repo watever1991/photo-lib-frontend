@@ -11,7 +11,10 @@ mutation createUser($email: String!, $password: String!, $username: String!) {
 mutation loginUser($username: String!, $password: String!) {
   tokenAuth(username: $username, password: $password) {
     token
-    payload
+    user {
+      id
+      username
+    }
   }
 }
 
@@ -34,5 +37,19 @@ query getProfile {
     id
     username
     email
+  }
+}
+
+mutation resetUserPassword(
+  $id: ID!
+  $currentPassword: String!
+  $newPassword: String!
+) {
+  resetPassword(
+    id: $id
+    currentPassword: $currentPassword
+    newPassword: $newPassword
+  ) {
+    success
   }
 }

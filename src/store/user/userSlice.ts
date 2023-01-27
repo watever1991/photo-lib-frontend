@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  token: localStorage.getItem("token" || ""),
-  username: "",
-  id: "",
+  token: localStorage.getItem("token") || "",
+  user: {
+    username: "",
+    id: localStorage.getItem("userId") || "",
+  },
 };
 
 export const userSlice = createSlice({
@@ -12,13 +14,13 @@ export const userSlice = createSlice({
   reducers: {
     setUser: (state, actions) => {
       state.token = actions.payload.token;
-      state.username = actions.payload.payload.username;
-      state.id = actions.payload.payload.id;
+      state.user.username = actions.payload.user.username;
+      state.user.id = actions.payload.user.id;
     },
     logout: (state) => {
       state.token = "";
-      state.username = "";
-      state.id = "";
+      state.user.username = "";
+      state.user.id = "";
     },
   },
 });

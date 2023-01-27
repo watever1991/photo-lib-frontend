@@ -25,3 +25,12 @@ export const validationForgetPassword = Yup.object().shape({
     .required("Username is required"),
   email: Yup.string().email("Email is invalid").required("Email is required"),
 });
+
+export const validationResetPassword = Yup.object().shape({
+  currentPassword: Yup.string()
+    .min(6, "CurrentPassword must be at least 6 characters")
+    .required("CurrentPassword is required"),
+  newPassword: Yup.string()
+    .min(6, "New password must be at least 6 characters")
+    .required("New password is required"),
+});

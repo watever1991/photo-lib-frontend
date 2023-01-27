@@ -4,7 +4,7 @@ import snackbarSlice from "./message/snackbarSlice";
 import { combineReducers } from "@reduxjs/toolkit";
 
 const reducers = combineReducers({
-  user: userReducer,
+  userSlice: userReducer,
   theme: themeReducer,
   snackbar: snackbarSlice,
 });

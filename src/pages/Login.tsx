@@ -83,9 +83,11 @@ const Login = () => {
       const response = await LoginUser({
         variables: { username: values.username, password: values.password },
       });
-      if (response.data?.tokenAuth?.token) {
+      if (response.data?.tokenAuth?.token && response.data?.tokenAuth?.user) {
         resetForm({});
         localStorage.setItem("token", response.data?.tokenAuth?.token);
+        localStorage.setItem("userId", response.data.tokenAuth.user?.id);
+
         dispatch(setUser(response.data.tokenAuth));
         dispatch(
           openSnackbar({
@@ -171,14 +173,14 @@ const Login = () => {
               </Button>
             </Grid>
             <Grid item xs={12}>
-              <Link to="/forget-password">
+              <Link to="/forget-password" style={{ textDecoration: "none" }}>
                 <Button variant="text" type="button" sx={styles.loginButton}>
                   Forgot password?
                 </Button>
               </Link>
             </Grid>
             <Grid item xs={12}>
-              <Link to="/register">
+              <Link to="/register" style={{ textDecoration: "none" }}>
                 <Button variant="text" type="button" sx={styles.loginButton}>
                   New member? Register here.
                 </Button>

@@ -17,8 +17,7 @@ const routes: TRoute[] = [
   },
   {
     path: "/home",
-    component: <Home />,
-    layout: <Layout />,
+    component: <Navigate to="/login" replace />,
   },
   {
     path: "/login",
@@ -31,6 +30,10 @@ const routes: TRoute[] = [
   {
     path: "/forget-password",
     component: <ForgetPassword />,
+  },
+  {
+    path: "/reset-password",
+    component: <Navigate to="/login" replace />,
   },
   {
     path: "*",

@@ -197,7 +197,7 @@ const Register = () => {
               </Button>
             </Grid>
             <Grid item xs={12}>
-              <Link to="/login">
+              <Link to="/login" style={{ textDecoration: "none" }}>
                 <Button variant="text" type="button" sx={styles.loginButton}>
                   Already a member? Login here.
                 </Button>

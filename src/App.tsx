@@ -16,7 +16,7 @@ import { AnonymousApp, UserApp } from "routers";
 
 function App() {
   const dispatch = useDispatch();
-  const token = useSelector((state: RootState) => state.user.token);
+  const token = useSelector((state: RootState) => state.userSlice.token);
 
   const [VerifyToken] = useVerifyTokenMutation();
 
