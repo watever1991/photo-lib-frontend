@@ -56,7 +56,7 @@ const ForgetPasswordForm = () => {
       animation: "float 6s ease-in-out infinite",
     },
     submitButton: {
-      backgroundColor: theme.palette.secondary[100],
+      backgroundColor: "white",
       color: "#2148C0",
       width: "100%",
       height: "45px",
